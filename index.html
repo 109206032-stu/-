@@ -5,26 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>台灣天然災害防護指南</title>
     <style>
-        body { font-family: 'Noto Sans TC', sans-serif; background-color: #f8fafc; color: #1e293b; line-height: 1.6; margin: 0; padding: 0; }
-        header { background-color: #0f172a; color: white; padding: 2rem; text-align: center; }
-        main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        .card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 1.5rem; }
-        a { color: #2563eb; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #f0f4f8; color: #334155; line-height: 1.6; margin: 0; padding: 0; }
+        header { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; padding: 3rem 1rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
+        header p { font-size: 1.1rem; opacity: 0.9; margin-top: 10px; }
+        main { max-width: 900px; margin: -2rem auto 2rem auto; padding: 0 1rem; }
+        .intro-card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); text-align: center; margin-bottom: 2.5rem; position: relative; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .disaster-card { background: white; padding: 2rem; border-radius: 12px; text-align: center; text-decoration: none; color: inherit; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 2px solid transparent; transition: all 0.3s ease; }
+        .disaster-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: #3b82f6; }
+        .emoji-icon { font-size: 4rem; display: block; margin-bottom: 1rem; }
+        .disaster-card h3 { margin: 0; color: #1e40af; font-size: 1.5rem; }
+        .disaster-card p { color: #64748b; font-size: 0.9rem; margin-top: 10px; }
+        .disabled { opacity: 0.6; cursor: not-allowed; }
+        .disabled:hover { transform: none; border-color: transparent; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
     </style>
 </head>
 <body>
     <header>
-        <h1>台灣天然災害防護指南</h1>
+        <h1>🌍 台灣天然災害防護指南</h1>
         <p>建立正確防災觀念，保護你我的安全</p>
     </header>
     <main>
-        <div class="card">
-            <h2>認識天然災害</h2>
-            <p>本站依據最新災防指引建立，旨在提供最正確的應對措施，並破除常見的防災迷思。請選擇下方主題以了解更多：</p>
-            <ul>
-                <li><a href="pages/earthquake.html">地震防護與應對</a></li>
-            </ul>
+        <div class="intro-card">
+            <h2>🚨 認識天然災害</h2>
+            <p>本站依據最新災防指引建立，旨在提供最正確的應對措施，並破除常見的防災迷思。請點擊下方卡片選擇主題：</p>
+        </div>
+        
+        <div class="grid">
+            <!-- 已經完成的地震頁面 -->
+            <a href="pages/earthquake.html" class="disaster-card">
+                <span class="emoji-icon">🫨</span>
+                <h3>地震防護與應對</h3>
+                <p>了解「趴下、掩護、穩住」的核心原則，破除黃金三角迷思。</p>
+            </a>
+            
+            <!-- 故意放一個灰色的建置中頁面，展示未來可用 AGENTS.md 擴充的潛力 -->
+            <a href="#" class="disaster-card disabled" title="尚未建置">
+                <span class="emoji-icon">🌀</span>
+                <h3>颱風防護與應對</h3>
+                <p>(頁面建置中... 待新增)</p>
+            </a>
         </div>
     </main>
 </body>
